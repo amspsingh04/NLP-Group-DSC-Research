@@ -19,15 +19,15 @@ We shall curate our own data pipeline from YT Videos and their subtitles, this p
 
 #### To clone this repo
 Windows:
-        git clone https://github.com/amspsingh04/NLP-Group-DSC-Research.git
-        cd NLP-Group-DSC-Research
-        python -m venv venv
-        .\venv\Scripts\activate
-        pip install -r requirements.txt
+    git clone https://github.com/amspsingh04/NLP-Group-DSC-Research.git
+    cd NLP-Group-DSC-Research
+    python -m venv venv
+    .\venv\Scripts\activate
+    pip install -r requirements.txt
 
 MacOS/Linux:
-        git clone https://github.com/amspsingh04/NLP-Group-DSC-Research.git
-        cd NLP-Group-DSC-Research
-        python -m venv venv
-        source venv/bin/activate
-        pip install -r requirements.txt
+    git clone https://github.com/amspsingh04/NLP-Group-DSC-Research.git
+    cd NLP-Group-DSC-Research
+    python -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
