@@ -7,15 +7,12 @@ import pandas as pd
 
 device = torch.device('cpu') #or cuda if you have cuda
 
-
-## Creating audio dataset directories
 audio_mp3 = "../Dataset/mp3"
 audio_wav = "../Dataset/wav"
 os.makedirs(audio_mp3, exist_ok=True)
 os.makedirs(audio_wav, exist_ok=True)
 
 
-## Reading the links from the csv
 df = pd.read_csv("links.csv")
 
 
