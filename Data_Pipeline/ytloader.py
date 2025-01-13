@@ -28,12 +28,7 @@ for video_url in df['links']:
             caption = yt.captions['en.LUU0EuDKgKo']
             if caption:
                 srt_content = caption.generate_srt_captions()
-                lines = srt_content.splitlines()
-                txt_content = ''
-                for line in lines:
-                    if re.search('^[0-9]+$', line) is None and re.search('^[0-9]{2}:[0-9]{2}:[0-9]{2}', line) is None and re.search('^$', line) is None:
-                                txt_content += ' ' + line.strip()
-                txt_content = txt_content.lstrip()
+                txt_content = caption.generate_txt_captions()
                 
                 # File paths
                 srt_file_name = f"{subtitles_srt}/vid{i}.srt"
