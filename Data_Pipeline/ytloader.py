@@ -43,6 +43,24 @@ for video_url in df['links']:
                 with open(txt_file_name, "w", encoding="utf-8") as f:
                     f.write(txt_content)
                 print(f"Subtitles saved as TXT: {txt_file_name}")
+            caption = yt.captions['en']
+            if caption:
+                srt_content = caption.generate_srt_captions()
+                txt_content = caption.generate_txt_captions()
+                
+                # File paths
+                srt_file_name = f"{subtitles_srt}/vid{i}.srt"
+                txt_file_name = f"{subtitles_txt}/vid{i}.txt"
+                
+                # Save as .srt
+                with open(srt_file_name, "w", encoding="utf-8") as f:
+                    f.write(srt_content)
+                print(f"Subtitles saved as SRT: {srt_file_name}")
+                
+                # Save as .txt
+                with open(txt_file_name, "w", encoding="utf-8") as f:
+                    f.write(txt_content)
+                print(f"Subtitles saved as TXT: {txt_file_name}")
             else:
                 caption = yt.captions['a.en']
                 srt_content = caption.generate_srt_captions()
